@@ -1,0 +1,162 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(https://img.freepik.com/free-photo/desk-workspace-with-various-elements_23-2148043207.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.todo-container {
+    background-color: rgba(233, 244, 246, 0.918); /* Semi-transparent black */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(175, 175, 219, 0.5);
+    width: 352px;
+    text-align: center;
+    transition: width 0.3s ease;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #912BBC;
+    font-weight: bold;
+}
+
+#todo-input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    
+}
+
+#todo-input :focus {
+    border-color: #912BBC;
+    outline: none; 
+}
+
+
+#add-btn, #delete-all-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #912BBC;
+    color: #f3f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#add-btn:hover, #delete-all-btn:hover {
+    background-color:#912BBC;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+   
+}
+
+li {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border:2px solid #912BBC;
+    /*border-color: black;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:black;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+li.completed {
+    text-decoration: line-through;
+    background-color: black;
+}
+
+li button {
+    display: flex;
+    align-items: center;
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li button svg {
+    margin-left: 5px;
+}
+
+li button:hover {
+    background-color:rgb(66, 59, 59);
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+    .todo-container {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #todo-input {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    #add-btn, #delete-all-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .todo-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #todo-input {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    #add-btn, #delete-all-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    li {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
